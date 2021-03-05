@@ -3,7 +3,7 @@
     <div>
       <ul>
         <li v-for="movie in moviesList" :key="movie.id">
-          <a>{{ movie.title }} ({{ movie.original_title }})</a>
+          <a href="#">{{ movie.title }} ({{ movie.original_title }})</a>
         </li>
       </ul>
     </div>
@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 export default {
   name: 'MoviesList',
   props: {
