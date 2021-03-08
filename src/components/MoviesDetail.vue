@@ -1,17 +1,44 @@
 <template>
   <div class="hello">
     <div>
-      <ul>
-        <li>id</li>
-        <li>title</li>
-        <li>original_title</li>
-        <li>original_title_romanised</li>
-        <li>description</li>
-        <li>director</li>
-        <li>producer</li>
-        <li>release_date</li>
-        <li>running_time</li>
-      </ul>
+      <table class="table">
+        <tr>
+          <td>id</td>
+          <td>{{ movie.id }}</td>
+        </tr>
+        <tr>
+          <td>title</td>
+          <td>{{ movie.title }}</td>
+        </tr>
+        <tr>
+          <td>original_title</td>
+          <td>{{ movie.original_title }}</td>
+        </tr>
+        <tr>
+          <td>original_title_romanised</td>
+          <td>{{ movie.original_title_romanised }}</td>
+        </tr>
+        <tr>
+          <td>description</td>
+          <td>{{ movie.description }}</td>
+        </tr>
+        <tr>
+          <td>director</td>
+          <td>{{ movie.director }}</td>
+        </tr>
+        <tr>
+          <td>producer</td>
+          <td>{{ movie.producer }}</td>
+        </tr>
+        <tr>
+          <td>release_date</td>
+          <td>{{ movie.release_date }}</td>
+        </tr>
+        <tr>
+          <td>running_time</td>
+          <td>{{ movie.running_time }}</td>
+        </tr>
+      </table>
     </div>
   </div>
 </template>

@@ -15,6 +15,8 @@
       </div>
       <div class="col-md-6">
         <MoviesDetail
+          v-if="movieId !== null"
+          :key="movieId"
           :movieId="movieId"
         />
       </div>
