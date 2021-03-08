@@ -3,7 +3,7 @@
     <div>
       <ul>
         <li v-for="movie in moviesList" :key="movie.id">
-          <a href="#">{{ movie.title }} ({{ movie.original_title }})</a>
+          <a v-on:click="selectMovie(movie.id)">{{ movie.title }} ({{ movie.original_title }})</a>
         </li>
       </ul>
     </div>
@@ -14,7 +14,8 @@
 export default {
   name: 'MoviesList',
   props: {
-  },
+    selectMovie: Function
+  }
   data () {
     return {
       moviesList: []
@@ -24,7 +25,7 @@ export default {
     axios
       .get('https://ghibliapi.herokuapp.com/films/')
       .then(response => (this.moviesList = response.data))
-  }
+  },
 }
 </script>
 

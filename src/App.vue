@@ -9,10 +9,14 @@
     <br>
     <div class="row">
       <div class="col-md-6">
-        <MoviesList/>
+        <MoviesList
+          :selectMovie="selectMovie"
+        />
       </div>
       <div class="col-md-6">
-        asdsad
+        <MoviesDetail
+          :movieId="movieId"
+        />
       </div>
     </div>
   </div>
@@ -20,11 +24,23 @@
 
 <script>
 import MoviesList from './components/MoviesList.vue'
+import MoviesDetail from './components/MoviesDetail.vue'
 
 export default {
   name: 'App',
   components: {
-    MoviesList
+    MoviesList,
+    MoviesDetail
+  },
+  data () {
+    return{
+      movieId: null
+    }
+  },
+  methods:{
+    selectMovie(movieId){
+      this.movieId = movieId
+    }
   }
 }
 </script>
