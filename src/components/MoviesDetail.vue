@@ -2,7 +2,7 @@
   <div class="hello">
     <div>
       <span v-if="movie === null">Loading...</span>
-      <table class="table" v-if="movie === null">
+      <table class="table" v-else>
         <tr>
           <td>id</td>
           <td>{{ movie.id }}</td>
