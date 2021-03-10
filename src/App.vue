@@ -14,7 +14,10 @@
         />
       </div>
       <div class="col-md-6">
+        <span v-if="movieId === null && !loading">Please, select a movie</span>
         <MoviesDetail
+          v-if="movieId !== null"
+          :key="movieId"
           :movieId="movieId"
         />
       </div>

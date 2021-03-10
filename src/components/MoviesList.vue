@@ -1,9 +1,10 @@
 <template>
   <div class="hello">
-    <div>
+    <span v-if="moviesList.length == 0">Loading...</span>
+    <div v-if="moviesList.length > 0">
       <ul>
         <li v-for="movie in moviesList" :key="movie.id">
-          <a v-on:click="selectMovie(movie.id)">{{ movie.title }} ({{ movie.original_title }})</a>
+          <a href="#" @click="selectMovie(movie.id)">{{ movie.title }} ({{ movie.original_title }})</a>
         </li>
       </ul>
     </div>
@@ -11,11 +12,12 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
   name: 'MoviesList',
   props: {
     selectMovie: Function
-  }
+  },
   data () {
     return {
       moviesList: []
