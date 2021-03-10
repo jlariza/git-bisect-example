@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
     <div>
-      <table class="table">
+      <span v-if="movie === null">Loading...</span>
+      <table class="table" v-if="movie === null">
         <tr>
           <td>id</td>
           <td>{{ movie.id }}</td>
