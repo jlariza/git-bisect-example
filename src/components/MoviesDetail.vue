@@ -2,7 +2,7 @@
   <div class="hello">
     <div>
       <span v-if="movie === null">Loading...</span>
-      <table class="table" v-if="movie === null">
+      <table class="table" v-if="movie !== null">
         <tr>
           <td>id</td>
           <td>{{ movie.id }}</td>
@@ -58,7 +58,7 @@ export default {
   },
   mounted () {
     axios
-      .get(`https://ghibliapi.herokuapp.com/films/${this.movieId}`)
+      .get(`http://localhost:3000/films/${this.movieId}`)
       .then(response => (this.movie = response.data))
   }
 }
