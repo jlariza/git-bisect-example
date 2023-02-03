@@ -25,7 +25,7 @@ export default {
   },
   mounted () {
     axios
-      .get('https://ghibliapi.herokuapp.com/films/')
+      .get('http://localhost:3000/films/')
       .then(response => (this.moviesList = response.data))
   },
 }
